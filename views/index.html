@@ -2,6 +2,17 @@
  
 {{ define "main" }}
 <div>
-    {{ .content }}
+    {{ range  .}}
+    <div class="container">
+        <div>{{ .ID }}</div>
+        <div>{{ .Name }}</div>
+        <div>{{ .Price }}</div>
+        <div>{{ .Stock }}</div>
+        <div>
+            {{ .StockStatus }}
+        </div>
+        <div></div>
+    </div>
+    {{ end }}
 </div>
 {{ end }}
